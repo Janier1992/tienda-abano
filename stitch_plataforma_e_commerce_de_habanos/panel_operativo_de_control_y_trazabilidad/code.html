@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary":"#775a19","on-tertiary":"#ffffff","outline":"#807570","surface-container-lowest":"#ffffff","on-background":"#1b1c1a","inverse-surface":"#30312e","on-surface":"#1b1c1a","surface-tint":"#685c56","on-primary-fixed-variant":"#4f453f","on-tertiary-container":"#9c7c77","surface-dim":"#dbdad6","surface-container-highest":"#e4e2de","surface":"#fbf9f5","primary":"#000000","on-error-container":"#93000a","surface-bright":"#fbf9f5","on-secondary":"#ffffff","secondary-fixed":"#ffdea5","primary-container":"#221a16","error":"#ba1a1a","tertiary":"#000000","on-surface-variant":"#4e4541","tertiary-fixed":"#ffdad4","on-primary-fixed":"#221a16","inverse-primary":"#d3c3bc","on-tertiary-fixed-variant":"#5b403c","tertiary-container":"#2b1613","on-primary-container":"#8f817b","on-secondary-container":"#785a1a","error-container":"#ffdad6","primary-fixed":"#f0dfd8","outline-variant":"#d1c4be","surface-container":"#efeeea","on-secondary-fixed-variant":"#5d4201","secondary-container":"#fed488","on-primary":"#ffffff","surface-container-low":"#f5f3ef","surface-variant":"#e4e2de","inverse-on-surface":"#f2f0ed","on-tertiary-fixed":"#2b1613","tertiary-fixed-dim":"#e3beb8","surface-container-high":"#eae8e4","background":"#fbf9f5","on-error":"#ffffff","secondary-fixed-dim":"#e9c176","on-secondary-fixed":"#261900","primary-fixed-dim":"#d3c3bc"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-lg":"1.5rem","space-sm":"0.5rem","gutter":"2rem","space-md":"1rem","space-xl":"2.5rem","margin":"4rem","margin-tablet":"2rem","space-xs":"0.25rem","space-2xl":"4rem","margin-mobile":"1.25rem","gutter-mobile":"1rem"},fontFamily:{"headline-sm":["Playfair Display"],"display-hero-mobile":["Playfair Display"],"headline-lg":["Playfair Display"],"regulatory-warning":["Plus Jakarta Sans"],"label-gold":["Plus Jakarta Sans"],"headline-md":["Playfair Display"],"body-sm":["Plus Jakarta Sans"],"display-hero":["Playfair Display"],"subhead":["Plus Jakarta Sans"],"label-spec":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Playfair Display"]},fontSize:{"headline-sm":["22px",{"lineHeight":"30px","fontWeight":"600"}],"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.01em","fontWeight":"500"}],"regulatory-warning":["13px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"700"}],"label-gold":["11px",{"lineHeight":"16px","letterSpacing":"0.12em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","fontWeight":"400"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"600"}],"subhead":["18px",{"lineHeight":"28px","letterSpacing":"0.01em","fontWeight":"400"}],"label-spec":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-lg px-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-sm"><img alt="Vanguardia Habanos Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWjhBaKQG_LGLDMYvqv6Pppld6lz_twyYZymi-O6WEEGKlaNBiEDyWxnKfvdjKqhaJrEFoHB7q2klBkjUCWLfVBevqQRLV10KtL19hmFwFO0NisKGg1SUpZsX1ABvP_WxH-zCnML7b_7gWg78KVz5nrHEnYyD2K-lsEGnFBG28lCmxzv4gNl1itX01qK2R2GdZVVZOn2kxqSWIviMLbnyY7H-jceCGktgUOlY0D614"/><div class="flex flex-col"><span class="font-headline-sm text-[16px] uppercase tracking-wider text-on-surface font-semibold">Vanguardia</span><span class="font-label-gold text-label-gold text-secondary uppercase tracking-widest">Panel de Control</span></div></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-secondary-container text-on-secondary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="inicio-boutique" href="#"><span class="material-symbols-outlined text-[20px]">storefront</span>Boutique Pública</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-semibold rounded-lg" data-path="panel-operativo" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span>Control de Operaciones</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="coleccion-de-habanos" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span>Gestión de Cava &amp; Vitolas</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="ficha-sommelier-virtual" href="#"><span class="material-symbols-outlined text-[20px]">support_agent</span>Consola Sommelier Virtual</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-body-md text-body-md" data-path="checkout-transparente" href="#"><span class="material-symbols-outlined text-[20px]">receipt_long</span>Auditoría de Pedidos</a></nav></div><div class="p-space-md bg-surface-container rounded-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-secondary"><span class="material-symbols-outlined text-[18px]">verified_user</span><span class="font-label-gold text-label-gold uppercase tracking-wider">Cava Activa 69% HR</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Trazabilidad blockchain de lotes D.O.P. sincronizada.</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md z-40 px-space-xl flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-md"><span class="font-label-gold text-label-gold uppercase tracking-widest text-secondary">Sistema Central de Gestión D.O.P.</span></div><div class="flex items-center gap-space-md"><button aria-label="Buscar en inventario" class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notificaciones" class="relative p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></header><main class="w-full pt-16 bg-surface min-h-screen px-space-xl py-space-xl"><div class="flex flex-col w-full gap-space-2xl">
+<!-- Sub-Header & Global Operational Status -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-widest">Auditoría Operacional Activa • Cava Central</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface">Consola Ejecutiva de Control</h1>
+<p class="font-subhead text-subhead text-on-surface-variant max-w-2xl">Supervisión en tiempo real de trazabilidad D.O.P., cumplimiento legal +18, climatización y custodia del Sommelier Virtual.</p>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<div class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">thermostat</span>
+<div class="flex flex-col">
+<span class="font-label-gold text-label-gold text-secondary uppercase">Cámara A</span>
+<span class="font-label-spec text-label-spec text-on-surface">17.2°C • 69.1% HR</span>
+</div>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-primary text-on-primary rounded-lg shadow-md hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-spec text-label-spec uppercase tracking-wider">Cierre de Lote D.O.P.</span>
+</button>
+</div>
+</section>
+<!-- 1. Tarjetas de Métricas Clave del Día -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- Card 1: Pedidos pendientes acondicionamiento -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-wider">Acondicionamiento</span>
+<span class="font-headline-md text-headline-md text-on-surface">38 Pedidos</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">ac_unit</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Estabilización 72h requerida</span>
+<span class="font-label-spec text-label-spec text-secondary">82%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">schedule</span> 14 lotes listos para embalaje sellado
+        </span>
+</div>
+</div>
+<!-- Card 2: Aprobación +18 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-wider">Verificación Legal (+18)</span>
+<span class="font-headline-md text-headline-md text-on-surface">98.4%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">badge</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-spec text-label-spec text-on-surface">624 cotejos biométricos</span>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[14px]">gpp_bad</span> 10 bloqueos por minoría
+          </span>
+</div>
+<svg class="w-12 h-12 -rotate-90 text-secondary" viewbox="0 0 36 36">
+<circle class="stroke-surface-container" cx="18" cy="18" fill="none" r="15.9155" stroke-width="3"></circle>
+<circle cx="18" cy="18" fill="none" r="15.9155" stroke="currentColor" stroke-dasharray="98.4, 100" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Card 3: Sommelier Bot vs Asesor Humano -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-wider">Flujo Sommelier Virtual</span>
+<span class="font-headline-md text-headline-md text-on-surface">88% / 12%</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex flex-col gap-space-xs">
+<div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm">
+<span>Resueltos por IA: 312</span>
+<span>Transferidos: 42</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full flex overflow-hidden">
+<div class="bg-secondary h-full" style="width: 88%;"></div>
+<div class="bg-primary-container h-full" style="width: 12%;"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">transfer_within_a_station</span> Handoff responsable activo
+        </span>
+</div>
+</div>
+<!-- Card 4: Stock Crítico en Humidor -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-gold text-label-gold text-error uppercase tracking-wider">Cava: Alerta de Reserva</span>
+<span class="font-headline-md text-headline-md text-error">4 Vitolas</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined">warning</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="truncate">Cohiba Behike 56</span>
+<span class="font-label-spec text-label-spec text-error">3 cajas</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="truncate">Partagás Lusitanias</span>
+<span class="font-label-spec text-label-spec text-error">5 cajas</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Reabastecimiento D.O.P. programado en 6 días</span>
+</div>
+</div>
+</section>
+<!-- 2. Módulo de Gestión de Catálogo y Verificación Comercial -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-widest">Catálogo D.O.P. &amp; Protocolo Comercial</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Validación de Vitolas &amp; Publicación</h2>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center bg-surface-container px-space-md py-space-xs rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-2">filter_alt</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface outline-none cursor-pointer">
+<option>Todos los estados</option>
+<option>Verificado D.O.P.</option>
+<option>Incompleto (Faltan campos)</option>
+<option>Desactivado</option>
+</select>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-secondary text-on-secondary rounded-lg shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-label-spec text-label-spec uppercase tracking-wider">Nueva Entrada de Cava</span>
+</button>
+</div>
+</div>
+<!-- Banner de Alerta Preventiva de Publicación -->
+<div class="p-space-md bg-secondary-container text-on-secondary-container rounded-lg flex items-start gap-space-md shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">gavel</span>
+<div class="flex flex-col gap-space-xs flex-1">
+<span class="font-label-spec text-label-spec uppercase tracking-wide">Protocolo de Publicación Estricta D.O.P.</span>
+<p class="font-body-sm text-body-sm">
+          El motor de la Boutique bloquea automáticamente la venta online si la vitola carece de: <strong class="font-semibold">código de timbre holográfico, año de cosecha de tripa o certificación de humedad inicial</strong>. Existen 2 vitolas con edición restringida.
+        </p>
+</div>
+</div>
+<!-- Tabla Catálogo -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-gold text-label-gold uppercase tracking-wider">
+<th class="py-space-md px-space-lg">ID D.O.P.</th>
+<th class="py-space-md px-space-md">Marca &amp; Vitola</th>
+<th class="py-space-md px-space-md">Cepo / Longitud</th>
+<th class="py-space-md px-space-md">Cava Actual</th>
+<th class="py-space-md px-space-md">Precio Oficial</th>
+<th class="py-space-md px-space-md">Estado Comercial</th>
+<th class="py-space-md px-space-lg text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-md text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-label-spec text-label-spec text-secondary">
+                DOP-CBA-2023-8891
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold">C</div>
+<div class="flex flex-col">
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Cohiba Siglo VI</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cañonazo • Vuelta Abajo</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm">Cepo 52</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">150 mm (5.9")</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-spec text-label-spec text-on-surface">48 gabinetes (25u)</span>
+</td>
+<td class="py-space-md px-space-md font-label-spec text-label-spec text-on-surface">
+                1,850.00 €
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-secondary font-label-gold text-label-gold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Verificado D.O.P.
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="p-space-xs text-on-surface-variant hover:text-secondary transition-colors" title="Detalles del lote" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 (Incompleto) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors bg-error-container/10">
+<td class="py-space-md px-space-lg font-label-spec text-label-spec text-on-surface-variant">
+                DOP-MON-2024-0012
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold">M</div>
+<div class="flex flex-col">
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Montecristo Línea 1935 Maltés</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sobresalientes • Pinar del Río</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm">Cepo 53</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">153 mm (6.0")</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-spec text-label-spec text-on-surface">12 cajas (20u)</span>
+</td>
+<td class="py-space-md px-space-md font-label-spec text-label-spec text-on-surface">
+                1,120.00 €
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-error-container text-on-error-container font-label-gold text-label-gold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[12px]">error</span>
+                  Incompleto
+                </span>
+<div class="text-[10px] text-error font-body-sm mt-0.5">Falta: Holograma Tabacuba</div>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="p-space-xs text-error hover:text-on-surface transition-colors" title="Completar datos requeridos" type="button">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-space-md px-space-lg font-label-spec text-label-spec text-secondary">
+                DOP-RYJ-2022-4410
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-headline-sm text-secondary font-bold">R</div>
+<div class="flex flex-col">
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Romeo y Julieta Churchill</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Julieta No. 2 • Vuelta Abajo</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm">Cepo 47</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">178 mm (7.0")</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-spec text-label-spec text-on-surface">31 tubos en estuche</span>
+</td>
+<td class="py-space-md px-space-md font-label-spec text-label-spec text-on-surface">
+                740.00 €
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container text-secondary font-label-gold text-label-gold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Verificado D.O.P.
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="p-space-xs text-on-surface-variant hover:text-secondary transition-colors" title="Detalles del lote" type="button">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 (Desactivado) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors opacity-75">
+<td class="py-space-md px-space-lg font-label-spec text-label-spec text-on-surface-variant">
+                DOP-HOY-2021-1903
+              </td>
+<td class="py-space-md px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-surface-container flex items-center justify-center font-headline-sm text-on-surface-variant font-bold">H</div>
+<div class="flex flex-col">
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Hoyo de Monterrey Epicure No. 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Robusto • San Juan y Martínez</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm">Cepo 50</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">124 mm (4.8")</span>
+</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-label-spec text-label-spec text-on-surface">0 unidades (Agotado)</span>
+</td>
+<td class="py-space-md px-space-md font-label-spec text-label-spec text-on-surface">
+                520.00 €
+              </td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-gold text-label-gold uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Desactivado
+                </span>
+</td>
+<td class="py-space-md px-space-lg text-right">
+<button class="p-space-xs text-on-surface-variant hover:text-on-surface transition-colors" title="Reactivar" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- 3. Centro de Supervisión del Asistente Virtual & Handoff Humano -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-widest">Escalamiento Responsable en Vivo</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Centro de Supervisión del Sommelier Virtual</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monitor de interacciones en tiempo real con detección semántica de intención y transición fluida a sommelier de sala.</p>
+</div>
+<!-- Asymmetric Layout: 5 columns list, 7 columns detailed inspect -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Active Chat Feed (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-sm">
+<span class="font-label-gold text-label-gold uppercase text-secondary">Sesiones Activas (6 en curso)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 transferida urgente</span>
+</div>
+<!-- Chat Item 1 (Selected) -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-md cursor-pointer relative overflow-hidden transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-label-spec text-label-spec text-on-surface">Mesa #4102 • Carlos Mendoza</span>
+</div>
+<span class="font-label-gold text-label-gold bg-error-container text-on-error-container px-space-xs py-0.5 rounded uppercase">Transferido</span>
+</div>
+<div class="mt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center text-[11px] font-semibold text-secondary bg-secondary-container/50 px-2 py-0.5 rounded">
+                Duda Maridaje Reserva
+              </span>
+<span class="text-body-sm text-on-surface-variant text-[11px]">Sentimiento: Expectante</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface line-clamp-1 italic">
+              "Busco acompañar un Ron Havana Club Tributo 2021 con un cepo grueso no invasivo..."
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-body-sm text-on-surface-variant text-[11px]">
+<span>Espera del cliente: 48s</span>
+<span class="text-secondary font-semibold">Inspeccionar →</span>
+</div>
+</div>
+<!-- Chat Item 2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md cursor-pointer transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-spec text-label-spec text-on-surface">Mesa #4105 • Elena Rostova</span>
+</div>
+<span class="font-label-gold text-label-gold bg-surface-container text-secondary px-space-xs py-0.5 rounded uppercase">En IA</span>
+</div>
+<div class="mt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center text-[11px] font-semibold text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+                Consulta de Lote &amp; Cosecha
+              </span>
+<span class="text-body-sm text-on-surface-variant text-[11px]">Sentimiento: Neutral</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 italic">
+              "¿Cuál es el código de fábrica impreso en la base de la caja Trinidad Vigía?"
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-body-sm text-on-surface-variant text-[11px]">
+<span>Turno IA: Respondiendo</span>
+<span>Hace 1m</span>
+</div>
+</div>
+<!-- Chat Item 3 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md cursor-pointer transition-all">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-spec text-label-spec text-on-surface">Mesa #4098 • Juan Ignacio P.</span>
+</div>
+<span class="font-label-gold text-label-gold bg-surface-container text-secondary px-space-xs py-0.5 rounded uppercase">En IA</span>
+</div>
+<div class="mt-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center text-[11px] font-semibold text-on-surface-variant bg-surface-container px-2 py-0.5 rounded">
+                Verificación Legal (+18)
+              </span>
+<span class="text-body-sm text-on-surface-variant text-[11px]">Sentimiento: Favorable</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1 italic">
+              "Subí el pasaporte para validar mi cuenta europea..."
+            </p>
+</div>
+<div class="mt-space-sm pt-space-xs flex justify-between items-center text-body-sm text-on-surface-variant text-[11px]">
+<span>Documento validado</span>
+<span>Hace 3m</span>
+</div>
+</div>
+</div>
+<!-- Right: Detailed Transferred Chat with Synthesis & Handoff Action (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col justify-between min-h-[520px]">
+<div class="flex flex-col gap-space-md">
+<!-- Header of inspect panel -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-wider">Sesión Transferida #4102</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cliente VIP Cava</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Carlos Mendoza • Maridaje y Reserva Limitada</h3>
+</div>
+<button class="px-space-md py-space-sm bg-primary text-on-primary rounded-lg shadow-md hover:bg-primary-container transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px]">support_agent</span>
+<span class="font-label-spec text-label-spec uppercase tracking-wider">Tomar Control del Chat</span>
+</button>
+</div>
+<!-- Bot Synthesis Callout -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-secondary font-label-gold text-label-gold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">summarize</span>
+<span>Síntesis Ejecutiva Generada por Sommelier Bot</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Confianza IA: 96%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              El cliente degusta actualmente un destilado complejo (<strong class="font-semibold">Havana Club Tributo 2021</strong>, notas de roble tostado y frutos secos). Solicita una vitola de tiro impecable y fortaleza media-alta que no eclipse el perfil del ron. Se le sugirió tentativamente un <em class="font-headline-sm italic">Ramón Allones Specially Selected</em> o un <em class="font-headline-sm italic">Partagás Serie D No. 4</em>. El cliente desea confirmación de un sommelier humano sobre el año de añejamiento en humidor disponible antes de ordenar 2 cajas.
+            </p>
+</div>
+<!-- Chat Transcript Snippet -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<span class="font-label-gold text-label-gold text-on-surface-variant uppercase tracking-wider">Registro de Conversación Previa</span>
+<div class="flex flex-col gap-space-sm max-h-56 overflow-y-auto pr-space-xs">
+<!-- Customer bubble -->
+<div class="flex flex-col self-start max-w-[85%] bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-gold text-[10px] text-on-surface-variant">Cliente • 11:24 AM</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Tengo una botella de Tributo 2021 abierta para esta noche con colegas. Necesito 2 cajas de una vitola robusta o corona gorda, pero me preocupa que la fortaleza opaque los tonos de cacao del ron.
+                </p>
+</div>
+<!-- Bot response -->
+<div class="flex flex-col self-end max-w-[85%] bg-secondary-container/30 p-space-sm rounded-lg">
+<span class="font-label-gold text-[10px] text-secondary">Sommelier Virtual • 11:24 AM</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Excelente elección de espirituoso. Para equilibrar el tostado y melaza del Tributo 2021 sin saturar el paladar, una fortaleza 4/5 con capa carmelita madura es ideal. Le propongo evaluar <strong>Ramón Allones Specially Selected (Cepo 50, 124 mm)</strong> con guarda de 2021.
+                </p>
+</div>
+<!-- Customer response -->
+<div class="flex flex-col self-start max-w-[85%] bg-surface-container p-space-sm rounded-lg">
+<span class="font-label-gold text-[10px] text-on-surface-variant">Cliente • 11:25 AM</span>
+<p class="font-body-sm text-body-sm text-on-surface mt-0.5">
+                  Me interesa mucho el Ramón Allones, pero ¿tienen en bodega cajas inspeccionadas con código de fábrica de 2021 o son más recientes? Quisiera hablar con un asesor de cava.
+                </p>
+</div>
+<!-- Escalation alert in stream -->
+<div class="flex items-center justify-center gap-space-xs py-space-xs text-on-surface-variant text-[11px] font-body-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">sync_alt</span>
+<span>Transferencia automática ejecutada por detección de consulta de añada física.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action / Response Input Box (Ready for Human) -->
+<div class="mt-space-md pt-space-md flex flex-col gap-space-xs">
+<div class="flex gap-space-sm">
+<input class="flex-1 bg-surface-container px-space-md py-space-sm rounded-lg font-body-sm text-body-sm text-on-surface outline-none placeholder:text-on-surface-variant" placeholder="Escriba su respuesta como Sommelier de Sala..." type="text"/>
+<button class="px-space-md py-space-sm bg-secondary text-on-secondary rounded-lg font-label-spec text-label-spec uppercase tracking-wider flex items-center gap-1 hover:opacity-90 transition-opacity" type="button">
+<span>Enviar</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Al responder, el bot se pausará automáticamente y la sesión se registrará con su ID de asesor.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Registro de Auditoría y Trazabilidad de Cumplimiento Normativo -->
+<section class="flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-gold text-label-gold text-secondary uppercase tracking-widest">Inmutabilidad &amp; Trazabilidad Tabacuba</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Bitácora de Cumplimiento Legal e Inspecciones</h2>
+</div>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm bg-surface-container text-on-surface rounded-lg shadow-sm hover:bg-surface-container-high transition-colors self-start sm:self-auto" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span class="font-label-spec text-label-spec uppercase tracking-wider">Exportar Certificado Oficial</span>
+</button>
+</div>
+<!-- Audit Log Mosaic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-gold text-label-gold text-secondary">PRECINTOS FISCALES</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Hoy, 09:30</span>
+</div>
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Inspección de Sellos Holográficos</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Cotejo satisfactorio de 120 cajas Partagás Serie D. Código microimpreso validado en base Tabacuba.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm text-[12px]">
+<span class="text-on-surface-variant">Inspector:</span>
+<span class="font-label-spec text-label-spec text-on-surface">M. Valdés (ID #88)</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-gold text-label-gold text-secondary">INGRESO A CAVA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">Ayer, 18:45</span>
+</div>
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Recepción Lote Trinidad Vigía</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ingreso a Cámara B con registro de 68.8% HR inicial. Asignación de sensores RFID individuales.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm text-[12px]">
+<span class="text-on-surface-variant">Custodio Cava:</span>
+<span class="font-label-spec text-label-spec text-on-surface">A. Solares (ID #14)</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-gold text-label-gold text-secondary">TARIFA OFICIAL</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">18 Oct, 11:15</span>
+</div>
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Ajuste Arancelario Habanos S.A.</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Actualización sincronizada de PVP para vitolas Cohiba y Trinidad conforme al boletín oficial No. 44.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm text-[12px]">
+<span class="text-on-surface-variant">Dirección Comercial:</span>
+<span class="font-label-spec text-label-spec text-on-surface">C. Domínguez (ID #03)</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-gold text-label-gold text-error">BLOQUEO NORMATIVO</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[11px]">17 Oct, 16:20</span>
+</div>
+<span class="font-label-spec text-label-spec text-on-surface font-semibold">Rechazo de Lote por Humedad</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Partida H. Upmann Magnum 54 desviada a cuarentena tras sensor registrar pico de 74.2% HR en tránsito.</p>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-body-sm text-[12px]">
+<span class="text-on-surface-variant">Auditor Calidad:</span>
+<span class="font-label-spec text-label-spec text-error">D. Guevara (ID #92)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Legal Regulatory Strip -->
+<footer class="bg-surface-container p-space-md rounded-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">policy</span>
+<span class="font-regulatory-warning text-regulatory-warning text-on-surface-variant uppercase">
+        SISTEMA DE GESTIÓN CERTIFICADO D.O.P. HABANOS • CUMPLIMIENTO RD 579/2017 &amp; DIRECTIVAS COMUNITARIAS DEL TABACO
+      </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sincronización Blockchain: Bloque #1,849,203 • OK</span>
+</footer>
+</div></main></div></body></html>

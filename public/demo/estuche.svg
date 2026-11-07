@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Estuche de piel para tres puros">
+  <defs>
+    <radialGradient id="estuche-bg" cx="50%" cy="38%" r="75%">
+      <stop offset="0" stop-color="#2c2a22"/><stop offset="0.55" stop-color="#17110d"/><stop offset="1" stop-color="#0c0907"/>
+    </radialGradient>
+    <linearGradient id="estuche-cedar" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#b9774a"/><stop offset="0.5" stop-color="#8e5532"/><stop offset="1" stop-color="#5e3520"/>
+    </linearGradient>
+    <linearGradient id="estuche-leaf" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#9a6238"/><stop offset="0.45" stop-color="#6e3f22"/><stop offset="1" stop-color="#3f2213"/>
+    </linearGradient>
+    <linearGradient id="estuche-gold" x1="0" x2="1">
+      <stop offset="0" stop-color="#8f6a32"/><stop offset="0.35" stop-color="#f1d79b"/><stop offset="0.6" stop-color="#c9a160"/><stop offset="1" stop-color="#7d5a28"/>
+    </linearGradient>
+    <linearGradient id="estuche-metal" x1="0" x2="1">
+      <stop offset="0" stop-color="#5b544c"/><stop offset="0.3" stop-color="#e9e1d3"/><stop offset="0.55" stop-color="#a9a093"/><stop offset="1" stop-color="#4a443d"/>
+    </linearGradient>
+    <filter id="estuche-shadow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="22"/></filter>
+    <filter id="estuche-glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="70"/></filter>
+    <filter id="estuche-soft"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000" flood-opacity="0.55"/></filter>
+  </defs>
+  <rect width="800" height="1000" fill="url(#estuche-bg)"/>
+  <circle cx="400" cy="360" r="260" fill="#e2b979" opacity="0.13" filter="url(#estuche-glow)"/>
+
+    <ellipse cx="400" cy="840" rx="200" ry="34" fill="#000" opacity="0.6" filter="url(#estuche-shadow)"/>
+    <g transform="translate(282 150) rotate(90 27 27)">
+    <rect x="0" y="0" width="260" height="54" rx="27" fill="url(#estuche-leaf)"/>
+    <path d="M12 16.2 Q 130 13.2 244 18.2" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/><path d="M12 29.700000000000003 Q 130 26.700000000000003 244 31.700000000000003" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/><path d="M12 42.120000000000005 Q 130 39.120000000000005 244 44.120000000000005" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/>
+    <rect x="0" y="0" width="260" height="17.28" rx="16.2" fill="#fff" opacity="0.07"/>
+    <rect x="41.6" y="-1" width="28.6" height="56" rx="3" fill="url(#estuche-gold)"/>
+    <rect x="50.7" y="16.2" width="10.4" height="21.6" rx="2" fill="#3b2410" opacity="0.6"/>
+  </g><g transform="translate(346 174) rotate(90 27 27)">
+    <rect x="0" y="0" width="260" height="54" rx="27" fill="url(#estuche-leaf)"/>
+    <path d="M12 16.2 Q 130 13.2 244 18.2" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/><path d="M12 29.700000000000003 Q 130 26.700000000000003 244 31.700000000000003" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/><path d="M12 42.120000000000005 Q 130 39.120000000000005 244 44.120000000000005" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/>
+    <rect x="0" y="0" width="260" height="17.28" rx="16.2" fill="#fff" opacity="0.07"/>
+    <rect x="41.6" y="-1" width="28.6" height="56" rx="3" fill="url(#estuche-gold)"/>
+    <rect x="50.7" y="16.2" width="10.4" height="21.6" rx="2" fill="#3b2410" opacity="0.6"/>
+  </g><g transform="translate(410 150) rotate(90 27 27)">
+    <rect x="0" y="0" width="260" height="54" rx="27" fill="url(#estuche-leaf)"/>
+    <path d="M12 16.2 Q 130 13.2 244 18.2" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/><path d="M12 29.700000000000003 Q 130 26.700000000000003 244 31.700000000000003" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/><path d="M12 42.120000000000005 Q 130 39.120000000000005 244 44.120000000000005" stroke="#2c170c" stroke-opacity="0.35" stroke-width="1.4" fill="none"/>
+    <rect x="0" y="0" width="260" height="17.28" rx="16.2" fill="#fff" opacity="0.07"/>
+    <rect x="41.6" y="-1" width="28.6" height="56" rx="3" fill="url(#estuche-gold)"/>
+    <rect x="50.7" y="16.2" width="10.4" height="21.6" rx="2" fill="#3b2410" opacity="0.6"/>
+  </g>
+    <g filter="url(#estuche-soft)">
+      <rect x="250" y="300" width="300" height="560" rx="70" fill="#2a1b13"/>
+      <rect x="250" y="300" width="300" height="560" rx="70" fill="url(#estuche-leaf)" opacity="0.35"/>
+      <rect x="268" y="318" width="264" height="524" rx="56" fill="none" stroke="#e9c98c" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="10 9"/>
+      <rect x="250" y="300" width="80" height="560" rx="40" fill="#fff" opacity="0.05"/>
+      <circle cx="400" cy="560" r="48" fill="none" stroke="url(#estuche-gold)" stroke-width="3"/>
+      <text x="400" y="575" text-anchor="middle" font-family="Georgia, serif" font-size="44" font-style="italic" fill="#e8c88a">C</text>
+    </g></svg>
