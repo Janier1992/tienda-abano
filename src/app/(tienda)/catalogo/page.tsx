@@ -21,9 +21,9 @@ export default function CatalogPage({ searchParams }: { searchParams: SearchPara
   return (
     <>
       <PageHeader
-        eyebrow="Colección"
-        title={<>La <em className="text-gold">colección</em></>}
-        description="Cajas, estuches, selecciones y accesorios. Cada ficha muestra precio, disponibilidad y condiciones antes de cualquier decisión."
+        eyebrow="Archivo General D.O.P."
+        title={<>Archivo General de <em className="text-gold">Vitolas D.O.P.</em></>}
+        description="Selección botánica y manual de tabaco negro cubano 100% tripa larga torcido totalmente a mano (Totalmente a Mano Tripa Larga). Custodia higrométrica auditada y precinto fiscal sellado."
       />
       <Container className="pb-8">
         <Suspense fallback={<CatalogSkeleton />}>

@@ -46,8 +46,8 @@ export function CheckoutFlow({ currency, minAge, salesEnabled, regions }: Props)
 
   return (
     <div className="space-y-10">
-      <div className="glass rounded-full px-5 py-4 md:px-8"><Stepper current={step} /></div>
-      <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr]">
+      <div><Stepper current={step} /></div>
+      <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
         <div>
           {blocked ? <PurchaseIntent lines={lines} /> : <CheckoutForm lines={lines} minAge={minAge} regions={regions} onStepChange={setStep} />}
         </div>
@@ -60,24 +60,30 @@ export function CheckoutFlow({ currency, minAge, salesEnabled, regions }: Props)
 function OrderSummary({ lines, currency }: { lines: CartLine[]; currency: string }) {
   return (
     <aside className="lg:sticky lg:top-28 lg:self-start" aria-label="Resumen del pedido">
-      <div className="glass ring-gold space-y-6 rounded-[2rem] p-7">
-        <h2 className="text-3xl">Resumen</h2>
+      <div className="space-y-6 rounded border border-border bg-card p-6 shadow-xs">
+        <div className="flex items-center justify-between border-b border-border pb-3">
+          <h2 className="font-display text-2xl text-ink">Resumen del Pedido</h2>
+          <span className="label-gold text-accent !text-[0.6rem]">Custodia D.O.P.</span>
+        </div>
         <ul className="space-y-4">
           {lines.map((line) => (
             <li key={line.productId} className="flex items-center gap-4">
-              <span className="relative size-14 shrink-0 overflow-hidden rounded-xl bg-surface">
+              <span className="relative size-14 shrink-0 overflow-hidden rounded border border-border bg-surface">
                 {line.imageUrl && <Image src={line.imageUrl} alt="" fill sizes="56px" unoptimized className="object-cover" />}
-                <span className="absolute right-0.5 top-0.5 grid min-w-5 place-items-center rounded-full bg-primary px-1 text-[0.6rem] font-bold text-primary-foreground">{line.quantity}</span>
+                <span className="absolute right-0.5 top-0.5 grid min-w-5 place-items-center rounded-full bg-ink px-1 text-[0.6rem] font-bold text-ink-foreground">{line.quantity}</span>
               </span>
-              <span className="min-w-0 flex-1 truncate text-sm">{line.name}</span>
-              <span className="text-sm font-semibold tabular-nums">{formatMoney(line.unitPriceCents * line.quantity, currency)}</span>
+              <span className="min-w-0 flex-1 truncate text-xs font-medium text-ink">{line.name}</span>
+              <span className="text-xs font-semibold tabular-nums text-ink">{formatMoney(line.unitPriceCents * line.quantity, currency)}</span>
             </li>
           ))}
         </ul>
-        <div className="hairline" />
-        <CostBreakdown subtotalCents={cartSubtotal(lines)} currency={currency} />
-        <p className="text-xs leading-relaxed text-muted-foreground">Importes orientativos: el precio final se recalcula con la información oficial al enviar el pedido.</p>
-        <ButtonLink href="/carrito" variant="outline" className="w-full">Modificar carrito</ButtonLink>
+        <div className="border-t border-border pt-4">
+          <CostBreakdown subtotalCents={cartSubtotal(lines)} currency={currency} />
+        </div>
+        <p className="text-[0.65rem] leading-relaxed text-muted-foreground">
+          Importes oficiales orientativos: el importe definitivo de precinto fiscal y logística climatizada se confirma antes del despacho.
+        </p>
+        <ButtonLink href="/carrito" variant="outline" className="w-full text-xs uppercase tracking-wider">Modificar carrito</ButtonLink>
       </div>
     </aside>
   )
